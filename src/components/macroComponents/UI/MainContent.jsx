@@ -1,5 +1,10 @@
+import ThermostatSection from "../../sections/ThermostatSection";
+
 export default function MainContent() {
+ 
   return (
-    <div>MainContent</div>
+    <main className="flex-grow-1">
+      <ThermostatSection />
+    </main>
   )
 }

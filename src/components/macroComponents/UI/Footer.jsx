@@ -1,5 +1,8 @@
+
 export default function Footer() {
   return (
-    <div>Footer</div>
+    <footer className="py-3 bg-light text-center border-top text-muted">
+      <span>FooterTemperatureC</span>
+    </footer>
   )
 }
