@@ -1,4 +1,4 @@
-export default function ThermostatSection({temperature, handleWarmer, handleColder, handleReset}) {
+export default function ThermostatSection() {
 
 
 

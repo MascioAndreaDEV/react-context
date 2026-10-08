@@ -1,13 +1,10 @@
 import ThermostatSection from "../../sections/ThermostatSection";
 
-export default function MainContent({temperature, handleWarmer, handleColder, handleReset}) {
+export default function MainContent() {
  
   return (
     <main className="flex-grow-1">
-      <ThermostatSection temperature={temperature}
-         handleColder={handleColder}
-          handleWarmer={handleWarmer}
-           handleReset={handleReset} />
+      <ThermostatSection />
     </main>
   )
 }

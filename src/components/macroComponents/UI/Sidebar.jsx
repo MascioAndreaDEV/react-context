@@ -1,4 +1,4 @@
-export default function Sidebar({temperature}) {
+export default function Sidebar() {
   {console.log()}
   return (
     <aside className="p-3 border-bottom border-2 border-primary bg-light" style={{ width: '180px' }}>
