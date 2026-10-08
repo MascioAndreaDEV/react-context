@@ -4,7 +4,7 @@ import Footer from './components/macroComponents/UI/Footer'
 import Header from './components/macroComponents/UI/Header'
 import MainContent from './components/macroComponents/UI/MainContent'
 import Sidebar from './components/macroComponents/UI/Sidebar'
-
+import TemperatureContext from "./components/context/TemperatureContext"
 function App() {
 
   const [temperature, setTemperature] = useState(24)
@@ -24,14 +24,19 @@ setTemperature(gradi => gradi > 22 ? gradi - 1 : gradi)
   return (
     <div className="d-flex flex-column min-vh-100">
       <Header />
+      <TemperatureContext value={
+        {temperature,
+          handleColder,
+          handleWarmer,
+          handleReset
+        }
+        }>
       <div className="flex-grow-1 d-flex gap-3">
-        <Sidebar temperature={temperature} />
-        <MainContent temperature={temperature}
-         handleColder={handleColder}
-          handleWarmer={handleWarmer}
-           handleReset={handleReset}  />
+        <Sidebar />
+        <MainContent />
       </div>
-      <Footer temperature={temperature} />
+      <Footer />
+      </TemperatureContext>
     </div>
   )
 }

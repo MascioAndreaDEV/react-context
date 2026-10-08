@@ -1,5 +1,9 @@
+import { useContext } from "react"
+import TemperatureContext from "../context/TemperatureContext"
+
 export default function ThermostatSection() {
 
+  const {temperature, handleColder, handleWarmer, handleReset} = useContext(TemperatureContext)
 
 
   return (
@@ -7,6 +11,7 @@ export default function ThermostatSection() {
       <h2 className="h4 mb-3 fw-bold text-center mt-5">MascioThermalControl</h2>
 
       <p className="text-center mt-5 fw-bolder">{temperature} C°</p>
+      
 
       <div className="btn-group d-flex gap-4 mt-5 " role="group" aria-label="Thermal controls">
         <button onClick={handleWarmer} type="button" className="btn btn-primary">+</button>
