@@ -3,14 +3,14 @@ import TemperatureContext from "../context/TemperatureContext"
 
 export default function ThermostatSection() {
 
-  const {temperature, handleColder, handleWarmer, handleReset} = useContext(TemperatureContext)
+  const {temperature, handleColder, handleWarmer, handleReset, statusMessage, isMin, isMax} = useContext(TemperatureContext)
 
 
   return (
     <div className="p-4">
       <h2 className="h4 mb-3 fw-bold text-center mt-5">MascioThermalControl</h2>
 
-      <p className="text-center mt-5 fw-bolder">{temperature} C°</p>
+      <p className="text-center mt-5 fw-bolder">{temperature} C° <span className="badge bg-info text-dark">{statusMessage}</span></p>
       
 
       <div className="btn-group d-flex gap-4 mt-5 " role="group" aria-label="Thermal controls">

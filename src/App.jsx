@@ -21,6 +21,11 @@ setTemperature(gradi => gradi > 22 ? gradi - 1 : gradi)
     setTemperature(24)
     }
 
+    const isMax = temperature >= 37;
+    const isMin = temperature <= 22;
+    const statusMessage = temperature > 30 ? 
+    'caldo' : temperature < 24 ? 'fresco' : 'ideale';
+
   return (
     <div className="d-flex flex-column min-vh-100">
       <Header />
@@ -28,7 +33,10 @@ setTemperature(gradi => gradi > 22 ? gradi - 1 : gradi)
         {temperature,
           handleColder,
           handleWarmer,
-          handleReset
+          handleReset,
+          isMax,
+          isMin,
+          statusMessage
         }
         }>
       <div className="flex-grow-1 d-flex gap-3">
